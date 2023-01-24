@@ -1,0 +1,83 @@
+@import './App.scss';
+
+#login-container {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background: $background-color;
+	img {
+		// width: 100%;
+		min-height: 100vh;
+	}
+	#login-form {
+        width: 15vw;
+		position: absolute;
+		font-family: 'Exo 2', sans-serif;
+		font-weight: bold;
+		top: 50%;
+		right: 10%;
+		z-index: 1;
+		@include tablet {
+			transform: translate(-50%, -50%);
+			top: 50%;
+			left: 50%;
+            width: 40vw;
+		}
+		label {
+			display: block;
+			margin-bottom: 5px;
+			font-size: 13px;
+		}
+		input {
+			margin-bottom: 10px;
+			padding: 10px;
+			border-radius: 10px;
+			border: none;
+			background-color: white;
+			box-shadow: 5px 5px 0px gray;
+			width: 100%;
+			&:focus {
+				outline: none;
+				box-shadow: 5px 5px 0px $button-focus;
+			}
+		}
+		#submit-register {
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			margin-top: 5px;
+			text-align: center;
+			#button-submit {
+				padding: 5px;
+				width: 40%;
+				border-radius: 10px;
+				background: $background-color;
+				box-shadow: 5px 5px 0px gray;
+				cursor: pointer;
+				&:active {
+					transform: translate(2px, 2px);
+				}
+			}
+			#button-register {
+				padding: 5px;
+				width: 40%;
+				text-decoration: underline;
+				cursor: pointer;
+				&:active {
+					transform: translate(2px, 2px);
+				}
+			}
+		}
+
+		#login-notification {
+			margin-top: 10px;
+            word-wrap: break-word;
+			color: red;
+            text-align: center;
+			#register-succeed {
+				color: green;
+			}
+		}
+	}
+}

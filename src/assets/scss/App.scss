@@ -1,0 +1,32 @@
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1280px;
+$background-color: linear-gradient(120deg, rgba(104, 104, 104, 1) 0%, rgba(183, 183, 183, 1) 100%);
+$button-focus: rgba(208, 255, 0, 0.733);
+
+@mixin mobile {
+	@media (max-width: #{$tablet-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (max-width: #{$desktop-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$desktop-width}) {
+		@content;
+	}
+}
+
+body {
+	margin: 0;
+	user-select: none;
+}
+
+.d-none {
+	display: none;
+}

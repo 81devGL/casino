@@ -1,0 +1,109 @@
+@import './App.scss';
+
+#header-container {
+	width: 100%;
+	display: flex;
+	padding: 20px 40px;
+	box-sizing: border-box;
+	justify-content: space-between;
+	border-bottom: 5px rgba(0, 0, 0, 0.404) solid;
+	#header-logo {
+		flex: 1 1 0;
+	}
+	#nav-bar {
+		flex: 3 1 0;
+		display: flex;
+		justify-content: flex-end;
+		#money {
+			span {
+				margin-right: 10px;
+			}
+			.fa-coins {
+				color: rgb(197, 197, 28);
+			}
+		}
+		.nav-item {
+			width: 10%;
+			text-align: center;
+			position: relative;
+			cursor: pointer;
+
+			&#account {
+				width: 15%;
+				border-left: solid gray 1px;
+			}
+			.nav-collapse {
+				display: none;
+				position: absolute;
+				top: 140%;
+				right: 0;
+				text-align: right;
+				transition: 1s;
+				white-space: nowrap;
+				min-width: 100%;
+				a {
+					width: 100%;
+					display: block;
+					z-index: 1;
+					position: relative;
+					text-decoration: none;
+					color: white;
+					font-family: 'Exo 2', sans-serif;
+					font-style: italic;
+					letter-spacing: 2px;
+				}
+				.shop-collapse,
+				.account-collapse {
+					width: 100%;
+					text-align: center;
+					background: white;
+					padding: 10px;
+					margin: 2px 0px;
+					transition: 0.5s;
+					&:hover {
+						transform: translateX(-10px);
+					}
+					a {
+						color: black;
+						font-style: normal;
+					}
+				}
+				.account-collapse {
+					a {
+						display: flex;
+						align-items: center;
+						span {
+							width: 80%;
+							border-right: solid 1px rgba(128, 128, 128, 0.329);
+						}
+						.icon {
+							display: inline-block;
+							width: 20%;
+						}
+					}
+				}
+				.game {
+					padding: 10px;
+					font-size: 20px;
+					font-weight: 600;
+					margin: 5px 0;
+					transition: 0.5s;
+					border-radius: 10px;
+					position: relative;
+					overflow: hidden;
+
+					&:hover {
+						transform: translateX(-10px);
+					}
+					img {
+						width: 100%;
+						position: absolute;
+						transform: translate(-50%, -50%);
+						top: 50%;
+						left: 50%;
+					}
+				}
+			}
+		}
+	}
+}
